@@ -14,12 +14,8 @@
   },
   "dependencies": {
     "-": "^0.0.1",
-    "@tailwindcss/postcss": "^4.1.11",
-    "autoprefixer": "^10.4.21",
-    "postcss": "^8.5.6",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "tailwindcss": "^4.1.11"
+    "react-dom": "^19.1.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.29.0",
@@ -28,6 +24,7 @@
     "@typescript-eslint/eslint-plugin": "^8.36.0",
     "@typescript-eslint/parser": "^8.36.0",
     "@vitejs/plugin-react": "^4.5.2",
+    "autoprefixer": "^10.4.16",
     "eslint": "^9.29.0",
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-prettier": "^5.5.1",
@@ -37,7 +34,9 @@
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.2.0",
     "husky": "^8.0.0",
+    "postcss": "^8.4.35",
     "prettier": "^3.6.2",
+    "tailwindcss": "^3.4.1",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.34.1",
     "vite": "^7.0.0"
