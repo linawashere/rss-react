@@ -19,7 +19,7 @@ class CardList extends React.Component<CardListProps> {
     }
 
     return (
-      <div className="card-list grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="p-4 card-list grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {animeList.map((anime, index) => (
           <li key={index}>
             <Card key={index} anime={anime} />
