@@ -1,9 +1,13 @@
 import Search from './Search';
-const Header = () => {
-  return (
-    <div className="header bg-gray-600">
-      <Search />
-    </div>
-  );
+import type HeaderProps from '../interfaces/headerProps';
+import React from 'react';
+class Header extends React.Component<HeaderProps> {
+    render() {
+        return (
+            <div className="header bg-gray-600">
+                <Search onSearch={this.props.onSearch}/>
+            </div>
+        );
+    }
 };
 export default Header;
