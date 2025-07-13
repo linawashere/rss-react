@@ -3,4 +3,9 @@ export default interface Anime {
   title: string;
   url: string;
   synopsis: string;
+  images?: {
+    jpg: {
+      image_url: string;
+    };
+  };
 }
