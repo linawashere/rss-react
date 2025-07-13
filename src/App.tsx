@@ -2,9 +2,9 @@ import './App.css';
 import Header from './components/Header';
 import React from 'react';
 import CardList from './components/CardList';
-import ErrorBoundary from './components/ErrorBoundary';
 import ErrorButton from './components/ErrorButton';
 import { searchAnime } from './api/jikan';
+import ErrorBoundary from './components/ErrorBoundary';
 
 class App extends React.Component {
   state = {
@@ -22,7 +22,13 @@ class App extends React.Component {
     try {
       this.setState({ isLoading: true, error: null });
       const data = await searchAnime(query);
+
+      if (!data || data.length === 0) {
+        throw new Error('API returned no data');
+      }
+
       this.setState({ animeList: data, isLoading: false });
+      localStorage.setItem('searchTerm', query);
     } catch (err) {
       this.setState({
         error: `Failed to fetch data: ${err}`,
@@ -37,17 +43,17 @@ class App extends React.Component {
 
   render() {
     return (
-      <ErrorBoundary>
-        <div className="flex flex-col h-full">
-          <Header onSearch={this.handleSearch} />
+      <div className="flex flex-col h-full">
+        <Header onSearch={this.handleSearch} />
+        <ErrorBoundary>
           <CardList
             animeList={this.state.animeList}
             isLoading={this.state.isLoading}
             error={this.state.error}
           />
           <ErrorButton />
-        </div>
-      </ErrorBoundary>
+        </ErrorBoundary>
+      </div>
     );
   }
 }

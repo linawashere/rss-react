@@ -64,3 +64,11 @@ body {
 .card {
   min-height: 30rem;
 }
+
+.error-boundary {
+  padding: 2rem;
+  background: #fee2e2;
+  color: #dc2626;
+  border-radius: 0.5rem;
+  margin: 1rem;
+}
