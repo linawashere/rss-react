@@ -1,8 +1,7 @@
 import type Anime from './Anime';
 
-export default interface AppState {
+export default interface CardListProps {
   animeList: Anime[];
   isLoading: boolean;
   error: string | null;
-  searchQuery: string;
 }

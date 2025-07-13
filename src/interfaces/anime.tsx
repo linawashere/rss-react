@@ -1,6 +1,6 @@
 export default interface Anime {
-    'mal_id': number;
-    'title': string;
-    'url': string;
-    'synopsis': string;
+  mal_id: number;
+  title: string;
+  url: string;
+  synopsis: string;
 }
