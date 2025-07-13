@@ -2,6 +2,8 @@ import './App.css';
 import Header from './components/Header';
 import React from 'react';
 import CardList from './components/CardList';
+import ErrorBoundary from './components/ErrorBoundary';
+import ErrorButton from './components/ErrorButton';
 import { searchAnime } from './api/jikan';
 
 class App extends React.Component {
@@ -35,14 +37,17 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="flex flex-col h-full">
-        <Header onSearch={this.handleSearch} />
-        <CardList
-          animeList={this.state.animeList}
-          isLoading={this.state.isLoading}
-          error={this.state.error}
-        />
-      </div>
+      <ErrorBoundary>
+        <div className="flex flex-col h-full">
+          <Header onSearch={this.handleSearch} />
+          <CardList
+            animeList={this.state.animeList}
+            isLoading={this.state.isLoading}
+            error={this.state.error}
+          />
+          <ErrorButton />
+        </div>
+      </ErrorBoundary>
     );
   }
 }
