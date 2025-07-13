@@ -1,4 +1,4 @@
-import type Anime from './Anime';
+import type Anime from './anime.tsx';
 
 export default interface CardListProps {
   animeList: Anime[];

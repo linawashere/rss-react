@@ -1,5 +1,5 @@
 import axios from 'axios';
-import type Anime from '../interfaces/Anime';
+import type Anime from '../interfaces/anime.tsx';
 const API_URL = 'https://api.jikan.moe/v4';
 export const searchAnime = async (
   query: string,

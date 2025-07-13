@@ -1,5 +1,5 @@
 import React from 'react';
-import type Anime from '../interfaces/Anime';
+import type Anime from '../interfaces/anime.tsx';
 
 interface CardProps {
   anime: Anime;
