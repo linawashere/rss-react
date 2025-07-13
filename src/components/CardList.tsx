@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from './Card';
+import Spinner from './Spinner';
 import type CardListProps from '../interfaces/card';
 
 class CardList extends React.Component<CardListProps> {
@@ -11,7 +12,11 @@ class CardList extends React.Component<CardListProps> {
     }
 
     if (isLoading) {
-      return <div className="loading-spinner">Loading...</div>;
+      return (
+        <div className="flex items-center justify-center h-[calc(100vh-200px)]">
+          <Spinner />
+        </div>
+      );
     }
 
     if (animeList.length === 0) {
