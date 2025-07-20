@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+  --text-font: 'Inter', 'Arial', sans-serif;
+  --logo-font: 'Lexend Exa', sans-serif;
+  font-size: 62.5%;
+}
+
+@media screen and (max-width: 767px) {
+  :root {
+    font-size: calc(10px + 13 * (100vw - 375px) / 447);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  :root {
+    font-size: calc(10px + 4 * (100vw - 768px) / 255);
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  :root {
+    font-size: calc(8px + 2 * (100vw - 1024px) / (1440 - 1024));
+  }
+}
+
+a {
+  font-weight: 500;
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+li {
+  list-style-type: none;
+}
+
+body {
+  margin: 0;
+  place-items: center;
+}
+
+.header {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+}
+
+.form-container {
+  display: flex;
+  width: 100%;
+}
+
+.form-input {
+  flex: 1;
+}
+
+.card {
+  min-height: 30rem;
+}
+
+.error-boundary {
+  padding: 2rem;
+  background: #fee2e2;
+  color: #dc2626;
+  border-radius: 0.5rem;
+  margin: 1rem;
+}
